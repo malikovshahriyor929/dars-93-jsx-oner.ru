@@ -28,7 +28,7 @@ const Cart = () => {
         ))}
         {/* )} */}
       </div>
-      <div className="p-5 border-2 rounded-md border-[#eeeeee] w-full h-fit">
+      <div className="p-5 border-2 rounded-md border-[#eeeeee] w-full h-fit flex  flex-col gap-3">
         <div className=" flex items-center gap-2">
           <p className="text-2xl font-medium">total price :</p>
           <p className="text-2xl font-semibold  ">{totalPrice} ₽</p>
