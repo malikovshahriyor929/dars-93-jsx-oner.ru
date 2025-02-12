@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 
 // svg
@@ -11,9 +11,12 @@ import { IoSearch } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa";
 import { LuShoppingCart } from "react-icons/lu";
 import { TbGridDots } from "react-icons/tb";
+import { ProductContext } from "../../context";
 
 // #6b59cc
 const Header = () => {
+  let {state}=useContext(ProductContext)
+  
   return (
     <>
       <div className="border-b border-[#a9a9a9] py-2">
@@ -65,7 +68,7 @@ const Header = () => {
 
                 {/* cart length */}
                 <div className="text-[14px] rounded-md bg-[#fb6019] w-fit px-1.5 text-white ">
-                  5
+                {state.data.length}
                 </div>
               </div>
             </NavLink>

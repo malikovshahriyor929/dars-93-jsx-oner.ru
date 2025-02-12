@@ -5,7 +5,6 @@ import { Button } from "antd";
 
 const Cart = () => {
   let { state } = useContext(ProductContext);
-  console.log(state);
   let totalPrice = state.data.reduce(
     (acc, value) => acc + value.price * value.counter,
     0
